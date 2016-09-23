@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', "AuthController@showLogin")->middleware("guest");
+Route::post("/", "AuthController@postLoginForm")->middleware("guest");
+
+// auth middelware referer til /login hvis man ikke er logget ind, da vi har vores login på index siden skal den bare navigere der hen
+Route::get("/login", function () {
+    return redirect("/");
 });
+
+
+Route::get("/home", function () {
+
+    echo "go";
+})->middleware("auth");

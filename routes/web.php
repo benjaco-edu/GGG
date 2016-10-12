@@ -24,5 +24,6 @@ Route::get("/home", function () {
 })->middleware("auth");
 
 
+
 // CAR
 Route::get("/cars", ["uses"=>"CarController@showList", "as" => "showCars"])->middleware("auth");

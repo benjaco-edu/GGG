@@ -10,17 +10,19 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
+// LOGIN
 Route::get('/', "AuthController@showLogin")->middleware("guest");
 Route::post("/", "AuthController@postLoginForm")->middleware("guest");
-
 // auth middelware referer til /login hvis man ikke er logget ind, da vi har vores login på index siden skal den bare navigere der hen
 Route::get("/login", function () {
     return redirect("/");
 });
 
-
+// HOME
 Route::get("/home", function () {
-
-    echo "go";
+    return view("home");
 })->middleware("auth");
+
+
+// CAR
+Route::get("/cars", "CarController@showList")->middleware("auth");

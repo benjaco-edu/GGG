@@ -9,6 +9,8 @@ use Illuminate\Routing\Controller;
 class AuthController extends Controller
 {
     public function showLogin(){
+        echo env("DB_DATABASE");
+        die();
         return view('login');
     }
     public function postLoginForm(){

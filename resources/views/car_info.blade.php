@@ -7,7 +7,7 @@
 <body>
 
 @include("inc.menu")
-
+<h1>Bil info</h1>
 <p>Model: {{$car['model']}}</p>
 <p>Price: {{$car['price']}}</p>
 <p>Model: {{$car['model']}}</p>

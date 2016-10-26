@@ -17,5 +17,6 @@
 <p>Seats: {{$car['seats']}}</p>
 <p>Comments: {{$car['comments']}}</p>
 
+
 </body>
 </html>

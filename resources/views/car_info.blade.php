@@ -16,6 +16,6 @@
 <p>InsuranceBasePrice: {{$car['insuranceBasePrice']}}</p>
 <p>Seats: {{$car['seats']}}</p>
 <p>Comments: {{$car['comments']}}</p>
-
+gsgsdf
 </body>
 </html>

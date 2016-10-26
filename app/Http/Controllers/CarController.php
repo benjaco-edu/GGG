@@ -12,6 +12,8 @@ class CarController extends Controller {
         return view("car_list")->with(["car"=>Car::all()]);
     }
     public function showCar($id){
-        echo $id;
+        return view("car_info")->with([
+            "car" => Car::findOrFail($id)
+        ]);
     }
 }

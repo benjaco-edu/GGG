@@ -7,8 +7,7 @@
 <body>
 
 @include("inc.menu")
-<h1>Bil info</h1>
-<p>Model: {{$car['model']}}</p>
+<h1>Bil info {{ Html::linkRoute("deleteCar", "slet bil", [ $car['id'] ])  }} - {{ Html::linkRoute("editCar", "rediger", [$car['id']]) }}</h1>
 <p>Price: {{$car['price']}}</p>
 <p>Model: {{$car['model']}}</p>
 <p>Year: {{$car['year']}}</p>
@@ -16,7 +15,6 @@
 <p>InsuranceBasePrice: {{$car['insuranceBasePrice']}}</p>
 <p>Seats: {{$car['seats']}}</p>
 <p>Comments: {{$car['comments']}}</p>
-
 
 </body>
 </html>

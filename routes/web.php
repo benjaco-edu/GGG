@@ -27,4 +27,9 @@ Route::get("/home", function () {
 
 // CAR
 Route::get("/cars", ["uses"=>"CarController@showList", "as" => "showCars"])->middleware("auth");
+Route::get("/cars_add", ["uses" => "CarController@addCarView", "as" => "addCar"])->middleware("auth");
+Route::post("/cars_add", ["uses" => "CarController@addCar"])->middleware("auth");
 Route::get("/cars/{car_id}", ["uses"=>"CarController@showCar", "as" => "showCar"])->middleware("auth");
+Route::get("/cars_delete/{car_id}", ["uses" => "CarController@deleteCar", "as" => "deleteCar"])->middleware("auth");
+Route::get("/cars_edit/{car_id}", ["uses" => "CarController@editCarView", "as" => "editCar"])->middleware("auth");
+Route::post("/cars_edit/{car_id}", ["uses" => "CarController@editCar"])->middleware("auth");

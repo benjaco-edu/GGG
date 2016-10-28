@@ -8,6 +8,8 @@
 
 @include("inc.menu")
 
+{{ Html::linkRoute("addCar", "Ny bil")  }}
+
 @foreach($car as $item)
     <p>
         {{ Html::linkRoute("showCar", $item['model']. "-" .$item['year'], [$item['id']]  )  }}
